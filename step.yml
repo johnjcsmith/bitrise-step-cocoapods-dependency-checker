@@ -1,0 +1,76 @@
+#
+# A couple of useful guides & docs:
+#
+# - Main Bitrise CLI docs: https://github.com/bitrise-io/bitrise/tree/master/_docs
+# - Step Development Guideline: https://github.com/bitrise-io/bitrise/blob/master/_docs/step-development-guideline.md
+# - Bitrise.yml format spec: https://github.com/bitrise-io/bitrise/blob/master/_docs/bitrise-yml-format-spec.md
+# - Bitrise docs: http://devcenter.bitrise.io/
+# - Bitrise CLI guides: http://devcenter.bitrise.io/bitrise-cli/
+
+title: |-
+  dependency-checker
+summary: |
+description: |
+  Uses jeremylong/DependencyCheck to search Podfile.lock for CVE vulnerabilites
+website: https://github.com/johnjcsmith/bitrise-step-dependency-checker
+source_code_url: https://github.com/johnjcsmith/bitrise-step-dependency-checker
+support_url: https://github.com/johnjcsmith/bitrise-step-dependency-checker/issues
+host_os_tags:
+  - osx-10.10
+  - ubuntu-16.04
+
+ project_type_tags:
+   - ios
+
+type_tags:
+  - dependency
+
+is_requires_admin_user: true
+is_always_run: false
+is_skippable: false
+run_if: ""
+
+deps:
+  brew:
+  - name: git
+  - name: wget
+  - name: dependency-check
+  apt_get:
+  - name: git
+  - name: wget
+
+
+toolkit:
+  bash:
+    entry_file: step.sh
+
+
+inputs:
+  - source_root_path: "$BITRISE_SOURCE_DIR"
+    opts:
+      title: "Source Code Directory path"
+      is_required: true
+  - podfile_lock_path: "$BITRISE_SOURCE_DIR/Podfile.lock"
+    opts:
+      title: "Podfile.lock path"
+      summary: "The path to your Podfile.lock file."
+      description: |
+          (Optional) will default to $BITRISE_SOURCE_DIR/Podfile.lock
+      is_expand: true
+      is_required: false
+      value_options: []
+  - fail_on_cvss_level: 11
+    opts:
+      title: "Fail on CVSS Level"
+      summary: "Sepcifies what level of CVSS should trigger a build failure"
+      description : |
+      (Optional) Specifies if the build should be failed
+      if a CVSS score above a specified level
+      is identified. 
+      
+      The default is 11; since
+      the CVSS scores are 0-10, by default the
+      build will never fail.
+      is_expand: true
+      is_required: false
+      value_options: []
