@@ -8,13 +8,13 @@
 # - Bitrise CLI guides: http://devcenter.bitrise.io/bitrise-cli/
 
 title: |-
-  dependency-checker
+  cocoapods-dependency-checker
 summary: |
 description: |
   Uses jeremylong/DependencyCheck to search Podfile.lock for CVE vulnerabilites
-website: https://github.com/johnjcsmith/bitrise-step-dependency-checker
-source_code_url: https://github.com/johnjcsmith/bitrise-step-dependency-checker
-support_url: https://github.com/johnjcsmith/bitrise-step-dependency-checker/issues
+website: https://github.com/johnjcsmith/bitrise-step-dependency-checker-cocoapods
+source_code_url: https://github.com/johnjcsmith/bitrise-step-dependency-checker-podfile_lock_path
+support_url: https://github.com/johnjcsmith/bitrise-step-dependency-checker-cocoapods/issues
 host_os_tags:
   - osx-10.10
   - ubuntu-16.04
