@@ -16,14 +16,14 @@ website: https://github.com/johnjcsmith/bitrise-step-dependency-checker-cocoapod
 source_code_url: https://github.com/johnjcsmith/bitrise-step-dependency-checker-podfile_lock_path
 support_url: https://github.com/johnjcsmith/bitrise-step-dependency-checker-cocoapods/issues
 host_os_tags:
-  - osx-10.10
-  - ubuntu-16.04
+    - osx-10.10
+    - ubuntu-16.04
 
- project_type_tags:
-   - ios
+project_type_tags:
+    - ios
 
 type_tags:
-  - dependency
+    - dependency
 
 is_requires_admin_user: true
 is_always_run: false
