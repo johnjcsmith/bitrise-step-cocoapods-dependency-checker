@@ -8,7 +8,7 @@
 # - Bitrise CLI guides: http://devcenter.bitrise.io/bitrise-cli/
 
 title: |-
-  cocoapods-dependency-checker
+  cocoapods-dependency-check
 summary: |
   OWASP dependency analysis for iOS / CocoaPods
 description: |
@@ -16,9 +16,9 @@ description: |
 
   The generated HTML document will be placed into BITRISE_DEPLOY_DIR by default.
   Remember to run the "Deploy to bitrise.io" step in order to persist artifacts.
-website: https://github.com/johnjcsmith/bitrise-step-dependency-checker-cocoapods
-source_code_url: https://github.com/johnjcsmith/bitrise-step-dependency-checker-podfile_lock_path
-support_url: https://github.com/johnjcsmith/bitrise-step-dependency-checker-cocoapods/issues
+website: https://github.com/johnjcsmith/bitrise-step-cocoapods-dependency-checker
+source_code_url: https://github.com/johnjcsmith/bitrise-step-cocoapods-dependency-checker
+support_url: https://github.com/johnjcsmith/bitrise-step-cocoapods-dependency-checker/issues
 host_os_tags:
     - osx-10.10
     - ubuntu-16.04
