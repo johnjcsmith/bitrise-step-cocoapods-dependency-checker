@@ -50,6 +50,14 @@ inputs:
     opts:
       title: "Source Code Directory path"
       is_required: true
+  - app_title: "$BITRISE_APP_TITLE"
+    opts:
+      title: "App title"
+      is_required: true
+  - deploy_dir: "$BITRISE_DEPLOY_DIR"
+    opts:
+      title: "Deploy directory to output scan artifacts"
+      is_required: true
   - podfile_lock_path: "$BITRISE_SOURCE_DIR/Podfile.lock"
     opts:
       title: "Podfile.lock path"
@@ -63,14 +71,13 @@ inputs:
     opts:
       title: "Fail on CVSS Level"
       summary: "Sepcifies what level of CVSS should trigger a build failure"
-      description : |
-      (Optional) Specifies if the build should be failed
-      if a CVSS score above a specified level
-      is identified. 
-      
-      The default is 11; since
-      the CVSS scores are 0-10, by default the
-      build will never fail.
+      description: |-
+        (Optional) Specifies if the build should be failed
+        if a CVSS score above a specified level is identified.
+
+        The default is 11; since
+        the CVSS scores are 0-10, by default the
+        build will never fail.
       is_expand: true
       is_required: false
       value_options: []
