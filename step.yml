@@ -36,7 +36,6 @@ run_if: ""
 deps:
   brew:
   - name: git
-  - name: wget
   - name: dependency-check
 
 
