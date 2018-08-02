@@ -10,6 +10,7 @@
 title: |-
   cocoapods-dependency-checker
 summary: |
+  OWASP dependency analysis for iOS / CocoaPods
 description: |
   Uses jeremylong/DependencyCheck to search Podfile.lock for CVE vulnerabilites.
 
