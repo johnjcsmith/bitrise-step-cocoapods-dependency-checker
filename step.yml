@@ -21,7 +21,6 @@ source_code_url: https://github.com/johnjcsmith/bitrise-step-cocoapods-dependenc
 support_url: https://github.com/johnjcsmith/bitrise-step-cocoapods-dependency-checker/issues
 host_os_tags:
     - osx-10.10
-    - ubuntu-16.04
 
 project_type_tags:
     - ios
@@ -39,9 +38,6 @@ deps:
   - name: git
   - name: wget
   - name: dependency-check
-  apt_get:
-  - name: git
-  - name: wget
 
 
 toolkit:
