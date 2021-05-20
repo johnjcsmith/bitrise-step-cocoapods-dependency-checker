@@ -18,6 +18,7 @@ workflows:
         inputs:
         - content: |
             #!/bin/bash
+            mkdir ./_tmp/
             cp ./sample_podfile.lock ./_tmp/Podfile.lock
     - change-workdir:
         title: Switch working dir to test / _tmp dir
