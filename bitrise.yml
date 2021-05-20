@@ -7,7 +7,7 @@ app:
   - A_SECRET_PARAM: $A_SECRET_PARAM
   # If you want to share this step into a StepLib
   - BITRISE_STEP_ID: cocoapods-dependency-check
-  - BITRISE_STEP_VERSION: "0.0.1"
+  - BITRISE_STEP_VERSION: "0.0.2"
   - BITRISE_STEP_GIT_CLONE_URL: https://github.com/johnjcsmith/bitrise-step-dependency-checker.git
   - MY_STEPLIB_REPO_FORK_GIT_URL: $MY_STEPLIB_REPO_FORK_GIT_URL
 
@@ -41,7 +41,7 @@ workflows:
         - content: |
             #!/bin/bash
             echo "Checking for presence of analysis report ..."
-            if [ ! -f "${BITRISE_DEPLOY_DIR}/dependency-check-report.html" ]; then
+            if [ ! -f "${BITRISE_DEPLOY_DIR}/cocoapods-dependency-check-report.html" ]; then
                 echo "Could not find generated analysis report!"
                 exit 1
             fi
